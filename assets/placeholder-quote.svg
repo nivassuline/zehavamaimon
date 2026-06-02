@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" direction="rtl">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#caa44e"/><stop offset="1" stop-color="#8a6d2f"/>
+  </linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="270" text-anchor="middle" fill="#fffaf0"
+        font-family="Heebo, Arial, sans-serif" font-size="62" font-weight="700">כל ילד צריך מבוגר אחד</text>
+  <text x="600" y="360" text-anchor="middle" fill="#fffaf0"
+        font-family="Heebo, Arial, sans-serif" font-size="62" font-weight="700">שיאמין בו</text>
+  <text x="600" y="470" text-anchor="middle" fill="#f2e4c4"
+        font-family="Heebo, Arial, sans-serif" font-size="38" font-weight="400">— הרב שלמה קרליבך</text>
+</svg>

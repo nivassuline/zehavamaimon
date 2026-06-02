@@ -1,0 +1,712 @@
+<!doctype html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>זהבה מימון — מאמנת בכירה ומומחית ADHD | הרצאות, סדנאות ואימון</title>
+<meta name="description" content="זהבה מימון — מאמנת בכירה להעצמה אישית ומומחית להפרעות קשב (ADHD). הרצאות, סדנאות, הכשרת הורים ואימון אישי. קליניקה במושב יגל ובזום.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#F7F3EA; --sand-2:#EFE9DA; --paper:#FCFAF4;
+  --ink:#2A2C28; --muted:#73776C; --line:#E2DBC9;
+  --sage:#5E7A60; --sage-d:#43583F; --sage-l:#8FA88A; --sage-tint:#E8EEE3;
+  --gold:#B89149; --err:#B6543C;
+  --r:18px; --shadow:0 18px 50px -28px rgba(43,57,40,.45);
+  --maxw:1200px; --navh:74px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Heebo",sans-serif;color:var(--ink);background:var(--sand);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{line-height:1.2;font-weight:700}
+section{padding:clamp(56px,8vw,110px) 0;scroll-margin-top:calc(var(--navh) + 14px)}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.12em;color:var(--sage);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--gold);display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;padding:14px 26px;border-radius:100px;transition:.25s;cursor:pointer;border:1.5px solid transparent;white-space:nowrap;font-family:inherit}
+.btn-primary{background:var(--sage);color:#fff}
+.btn-primary:hover{background:var(--sage-d)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sage-l);outline-offset:2px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- top utility + nav ---------- */
+.topbar{background:var(--sage-d);color:#e9efe6;font-size:13.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:18px}
+.topbar a{display:inline-flex;align-items:center;gap:7px;opacity:.92}
+.topbar a:hover{opacity:1}
+.topbar .sep{opacity:.45}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(252,250,244,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.nav.scrolled{box-shadow:0 8px 30px -22px rgba(43,57,40,.5)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--navh);gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;color:var(--sage-d)}
+.brand img{height:40px;width:auto}
+.brand small{display:block;font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.menu{display:flex;gap:7px;align-items:center}
+.menu a{font-size:15.5px;font-weight:500;color:var(--ink);padding:8px 13px;border-radius:8px;transition:.2s;position:relative}
+.menu a:hover{background:var(--sage-tint);color:var(--sage-d)}
+.menu a.active{color:var(--sage-d);font-weight:700}
+.menu a.active::after{content:"";position:absolute;inset-inline:13px;bottom:2px;height:2px;border-radius:2px;background:var(--gold)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 90% 0%, var(--sand-2) 0%, var(--sand) 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,70px);align-items:center}
+.hero-copy h1{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.01em;margin:18px 0 6px}
+.hero-copy h1 .accent{color:var(--sage)}
+.hero-sub{font-size:clamp(18px,1.5vw,21px);color:var(--muted);max-width:30em;margin-bottom:14px}
+.hero-lead{font-size:17px;color:var(--ink);max-width:34em;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.cred-chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:13.5px;font-weight:600;color:var(--sage-d)}
+.chip b{color:var(--gold)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.portrait-disc{position:relative;width:min(100%,440px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 35%, var(--sage-tint), var(--sage-l));box-shadow:var(--shadow)}
+.portrait-disc img{position:absolute;inset:0;width:100%;height:104%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 30px rgba(0,0,0,.18))}
+.hero-badge{position:absolute;bottom:18px;right:-6px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:14px 18px;display:flex;align-items:center;gap:12px;max-width:230px}
+.hero-badge .num{font-size:30px;font-weight:800;color:var(--sage);line-height:1}
+.hero-badge small{font-size:13px;color:var(--muted);line-height:1.35}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--sage-d);color:#eef3ea}
+.trust .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding-top:34px;padding-bottom:34px}
+.trust-item{display:flex;flex-direction:column;gap:2px}
+.trust-item .k{font-size:clamp(24px,2.6vw,34px);font-weight:800;color:#fff}
+.trust-item .l{font-size:13.5px;opacity:.82}
+.trust-logos{display:flex;align-items:center;gap:20px}
+.trust-logos img{height:46px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
+
+/* ---------- section heads ---------- */
+.sec-head{max-width:46em}
+.sec-head h2{font-size:clamp(28px,3.4vw,44px);margin:14px 0 12px;font-weight:800}
+.sec-head p{font-size:17.5px;color:var(--muted)}
+.center{margin-inline:auto;text-align:center}
+.center .eyebrow{justify-content:center}
+
+/* ---------- about / story ---------- */
+.about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,5vw,64px);align-items:center}
+.about-img{position:relative}
+.about-img .frame{border-radius:var(--r);overflow:hidden;background:var(--sage-tint);aspect-ratio:4/5;box-shadow:var(--shadow)}
+.about-img .frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+.about-quote{position:absolute;bottom:-22px;inset-inline-start:-18px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:18px 22px;max-width:260px;border-top:3px solid var(--gold)}
+.about-quote p{font-family:"Frank Ruhl Libre",serif;font-size:18px;font-weight:700;color:var(--sage-d);line-height:1.4}
+.about-body p{font-size:17px;color:#444;margin-bottom:16px}
+.about-body strong{color:var(--ink)}
+.pull{font-family:"Frank Ruhl Libre",serif;font-size:clamp(21px,2.3vw,27px);font-weight:700;color:var(--sage-d);border-inline-start:4px solid var(--gold);padding-inline-start:18px;margin:22px 0}
+
+/* ---------- offer cards ---------- */
+.offer{background:var(--paper)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;transition:.28s;display:flex;flex-direction:column;align-items:flex-start}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.card .ico{width:54px;height:54px;border-radius:14px;background:var(--sage-tint);color:var(--sage-d);display:grid;place-items:center;margin-bottom:20px}
+.card .ico svg{width:28px;height:28px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--muted);margin-bottom:16px}
+.card .more{font-weight:600;color:var(--sage);font-size:15px;display:inline-flex;gap:6px;align-items:center;background:none;border:0;cursor:pointer;font-family:inherit;padding:0;margin-top:auto;transition:.2s}
+.card .more:hover{gap:10px;color:var(--sage-d)}
+
+/* ---------- lectures ---------- */
+.lectures .wrap{position:relative}
+.lec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:42px}
+.lec{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.22s;text-align:start;cursor:pointer;font-family:inherit;width:100%}
+.lec:hover{border-color:var(--sage-l);background:var(--sage-tint);transform:translateY(-3px)}
+.lec .n{font-family:"Frank Ruhl Libre",serif;font-size:22px;font-weight:700;color:var(--gold);min-width:34px}
+.lec h3{font-size:18.5px;margin-bottom:4px}
+.lec p{font-size:14.5px;color:var(--muted);margin-bottom:8px}
+.lec .book{font-size:13.5px;font-weight:700;color:var(--sage);display:inline-flex;align-items:center;gap:5px;opacity:0;transform:translateX(6px);transition:.22s}
+.lec:hover .book{opacity:1;transform:none}
+
+/* ---------- store ---------- */
+.store .wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.prod{display:grid;grid-template-columns:auto 1fr;gap:24px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;align-items:center}
+.prod img{width:140px;border-radius:10px;box-shadow:0 10px 26px -12px rgba(0,0,0,.4)}
+.prod h3{font-size:21px;margin-bottom:6px}
+.prod .tag{font-size:13px;font-weight:700;color:var(--sage);letter-spacing:.04em;margin-bottom:8px}
+.prod p{font-size:15px;color:var(--muted);margin-bottom:14px}
+
+/* ---------- credo ---------- */
+.credo{background:linear-gradient(150deg,var(--sage-d),var(--sage));color:#f3f7f0;text-align:center;position:relative;overflow:hidden}
+.credo::before,.credo::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.06)}
+.credo::before{width:340px;height:340px;top:-120px;inset-inline-start:-90px}
+.credo::after{width:260px;height:260px;bottom:-110px;inset-inline-end:-60px}
+.credo .wrap{position:relative;max-width:880px}
+.credo .mark{font-family:"Frank Ruhl Libre",serif;font-size:80px;line-height:.6;color:var(--gold);height:40px}
+.credo blockquote{font-family:"Frank Ruhl Libre",serif;font-size:clamp(24px,3.2vw,40px);font-weight:500;line-height:1.45;margin:18px 0 26px}
+.credo cite{font-style:normal;font-weight:600;font-size:17px;opacity:.9}
+.credo .sign{font-family:"Frank Ruhl Libre",serif;font-size:30px;color:var(--gold);margin-top:6px}
+
+/* ---------- contact ---------- */
+.contact{background:var(--paper)}
+.contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,56px);align-items:start}
+.contact-intro h2{font-size:clamp(28px,3.4vw,42px);margin:14px 0 10px}
+.contact-intro>p{color:var(--muted);font-size:17px;margin-bottom:24px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.cnt{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s}
+a.cnt:hover{border-color:var(--sage-l);transform:translateY(-2px)}
+.cnt .ico{width:42px;height:42px;border-radius:11px;background:var(--sage-tint);color:var(--sage-d);display:grid;place-items:center;flex-shrink:0}
+.cnt .ico svg{width:21px;height:21px}
+.cnt .k{font-size:13px;color:var(--muted)}
+.cnt .v{font-size:16px;font-weight:600}
+.map-card{background:var(--sage-tint);border-radius:var(--r);min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.map-card .pin{position:absolute;inset:0;background:
+  radial-gradient(circle at 60% 40%, rgba(94,122,96,.25), transparent 45%),
+  repeating-linear-gradient(0deg,transparent 0 38px,rgba(94,122,96,.10) 38px 39px),
+  repeating-linear-gradient(90deg,transparent 0 38px,rgba(94,122,96,.10) 38px 39px)}
+.map-card .lbl{position:relative;background:#fff;border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;align-self:flex-start}
+.map-card .lbl b{display:block;font-size:15px}
+.map-card .lbl span{font-size:13px;color:var(--muted)}
+
+/* form */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,3vw,34px);box-shadow:var(--shadow);position:relative}
+.form-card h3{font-size:22px;margin-bottom:4px}
+.form-card .fc-sub{font-size:14.5px;color:var(--muted);margin-bottom:20px}
+.frm .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13.5px;font-weight:600;color:var(--sage-d);margin-bottom:6px}
+.field label .req{color:var(--gold)}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:15.5px;color:var(--ink);background:var(--sand);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;transition:.2s}
+.field select{cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2373776C' stroke-width='2' viewBox='0 0 24 24'><path d='m6 9 6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:left 14px center;padding-inline-start:38px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage);background:#fff;box-shadow:0 0 0 4px var(--sage-tint)}
+.field textarea{min-height:104px;resize:vertical}
+.field.err input,.field.err select,.field.err textarea{border-color:var(--err);background:#fcf3f0}
+.field .msg{font-size:12.5px;color:var(--err);margin-top:5px;display:none;font-weight:600}
+.field.err .msg{display:block}
+.frm .submit{width:100%;justify-content:center;margin-top:6px;font-size:17px;padding:15px}
+.frm .alt{text-align:center;font-size:13.5px;color:var(--muted);margin-top:14px}
+.frm .alt a{color:var(--sage-d);font-weight:600;text-decoration:underline}
+.form-success{display:none;text-align:center;padding:18px 6px}
+.form-success.show{display:block;animation:pop .4s ease}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.form-success .ok{width:64px;height:64px;border-radius:50%;background:var(--sage-tint);color:var(--sage-d);display:grid;place-items:center;margin:0 auto 16px}
+.form-success .ok svg{width:32px;height:32px}
+.form-success h3{font-size:23px;margin-bottom:8px}
+.form-success p{color:var(--muted);font-size:15.5px;margin-bottom:18px;max-width:30em;margin-inline:auto}
+.form-success .again{background:none;border:0;color:var(--sage);font-weight:600;cursor:pointer;font-family:inherit;font-size:14.5px;margin-top:14px;text-decoration:underline}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#cfd2c9;padding:54px 0 26px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+footer h4{color:#fff;font-size:16px;margin-bottom:14px}
+footer a,footer button.lnk{display:block;font-size:14.5px;opacity:.8;margin-bottom:9px;background:none;border:0;color:inherit;font-family:inherit;cursor:pointer;text-align:start;padding:0}
+footer a:hover,footer button.lnk:hover{opacity:1;color:var(--sage-l)}
+footer .ft-brand p{font-size:14.5px;opacity:.75;max-width:30em;margin-top:12px}
+.ft-brand .lg{font-size:22px;font-weight:800;color:#fff}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:20px;font-size:13px;opacity:.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* floating buttons */
+.fab{position:fixed;z-index:60;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:.25s;cursor:pointer;border:0}
+.wa-float{bottom:22px;inset-inline-start:22px;width:58px;height:58px;background:#25D366;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+.to-top{bottom:22px;inset-inline-end:22px;width:50px;height:50px;background:var(--sage-d);color:#fff;opacity:0;pointer-events:none;transform:translateY(10px)}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{background:var(--ink)}
+.to-top svg{width:22px;height:22px}
+
+/* toast */
+.toast{position:fixed;bottom:90px;inset-inline-start:22px;z-index:70;background:var(--ink);color:#fff;padding:13px 20px;border-radius:12px;font-size:14.5px;font-weight:600;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none;max-width:300px}
+.toast.show{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero-art{order:-1}
+  .hero-actions,.cred-chips,.eyebrow{justify-content:center}
+  .about .wrap,.store .wrap,.contact .wrap{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .lec-grid{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .contact-intro{margin-bottom:8px}
+}
+@media(max-width:680px){
+  .menu{display:none}
+  .burger{display:flex}
+  .menu.open{display:flex;position:absolute;top:var(--navh);inset-inline:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 20px;gap:4px;box-shadow:var(--shadow)}
+  .menu.open a{padding:12px}
+  .topbar .util-extra{display:none}
+  .trust .wrap{gap:18px}
+  .prod{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .contact-grid,.frm .row{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- top utility -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="util-extra">קליניקה במושב יגל · אונליין בזום · ייעוץ גם בחו״ל</div>
+    <div style="display:flex;gap:16px;align-items:center">
+      <a href="tel:0543193619">☎ 054-3193619</a>
+      <span class="sep">|</span>
+      <a href="mailto:z.j.maimon@gmail.com">z.j.maimon@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="siteNav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="assets/logo-circle.png" alt="זהבה מימון">
+      <span>זהבה מימון<small>מאמנת בכירה · מומחית ADHD</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about">אודות</a>
+      <a href="#offer">מה אני מציעה</a>
+      <a href="#lectures">הרצאות</a>
+      <a href="#store">חנות</a>
+      <a href="#credo">אני מאמינה</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary" data-book>להזמנת הרצאה</a>
+      <button class="burger" id="burger" aria-label="פתיחת תפריט" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">נעים מאוד</div>
+      <h1>זהבה מימון<br><span class="accent">הפרעות קשב הן מתנה</span></h1>
+      <p class="hero-sub">מאמנת בכירה להעצמה אישית ולשינוי, מומחית להפרעות ADHD — מתוך ארבעה עשורים בחינוך וניסיון חיים אישי.</p>
+      <p class="hero-lead">אני מלווה הורים, ילדים, זוגות ואנשי חינוך בהתמודדות עם הפרעות קשב — בגישה חמה, מקצועית ומבוססת ניסיון. "אין חכם כבעל ניסיון", ואני בעלת ניסיון חיים רב.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-book>להזמנת הרצאה או סדנה</a>
+        <a href="#about" class="btn btn-ghost">הסיפור שלי ←</a>
+      </div>
+      <div class="cred-chips">
+        <span class="chip">M.Ed בחינוך</span>
+        <span class="chip">מאמנת בכירה <b>MCIL</b></span>
+        <span class="chip">הסמכת <b>ICF</b></span>
+        <span class="chip">גמלאית משרד החינוך</span>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="portrait-disc">
+        <img src="assets/zehava-portrait.png" alt="זהבה מימון">
+      </div>
+      <div class="hero-badge">
+        <span class="num">40+</span>
+        <small>שנות ניסיון בחינוך, הוראה והדרכה</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- trust strip -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item"><span class="k">+40</span><span class="l">שנות עיסוק בחינוך</span></div>
+    <div class="trust-item"><span class="k">7</span><span class="l">הרצאות מבוקשות</span></div>
+    <div class="trust-item"><span class="k">2</span><span class="l">ספרים · עברית ואנגלית</span></div>
+    <div class="trust-item"><span class="k">צמ״ת</span><span class="l">מודל פוטותרפי ייחודי</span></div>
+    <div class="trust-logos">
+      <img src="assets/cert-mcil.png" alt="לשכת המאמנים בישראל">
+      <img src="assets/cert-icf.png" alt="ICF">
+    </div>
+  </div>
+</div>
+
+<!-- about / story -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal">
+      <div class="frame"><img src="assets/zehava-portrait.png" alt="זהבה מימון" style="background:var(--sage-tint)"></div>
+      <div class="about-quote"><p>"כל ילד צריך מבוגר אחד שיאמין בו"</p></div>
+    </div>
+    <div class="about-body reveal">
+      <div class="eyebrow">הסיפור שלי</div>
+      <h2 style="font-size:clamp(28px,3.4vw,42px);margin:14px 0 18px">ממקור ראשון —<br>כי זר לא יבין את זאת</h2>
+      <p>כילדה בישראל של שנות השישים סבלתי מחרדות, מהפרעת אכילה, מליקויי למידה ומדימוי עצמי נמוך. סולקתי בבושת פנים ממערכת החינוך — וחזרתי אליה בניצחון, כמורה, מחנכת ומדריכה ארצית במשרד החינוך.</p>
+      <p>כבת להורים בעלי ADHD ירשתי גם אני את <strong>"המתנה"</strong> של הפרעת קשב וריכוז, וכך גם בעלי אליהו ושניים מארבעת ילדינו. מתוך כך נבנה ניסיון חיים שלם — אישי ומקצועי כאחד.</p>
+      <div class="pull">"ניצחתי את כולם, אפילו את עצמי" — מתוך הסיפור שאני מספרת על הבמה.</div>
+      <a href="#contact" class="btn btn-primary" data-book>הזמינו אותי להרצות</a>
+    </div>
+  </div>
+</section>
+
+<!-- offer -->
+<section class="offer" id="offer">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">מה אני מציעה</div>
+      <h2>ארגז כלים שלם — קחו את מה שמתאים בדיוק לכם</h2>
+      <p>מתוך ותק וניסיון רב בניתי מענה מגוון להורים, לילדים, לזוגות ולצוותי חינוך.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v11H3z"/><path d="M8 21h8M12 16v5"/></svg></div>
+        <h3>הרצאות</h3>
+        <p>שבע הרצאות מבוקשות — מהסיפור האישי ועד זוגיות, אופטימיות וגיל הרך. מועברות בפני הורים, צוותי חינוך ומנהלים.</p>
+        <a href="#lectures" class="more">לכל ההרצאות ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15 20c0-2 1-3.4 3-3.4S21 18 21 20"/></svg></div>
+        <h3>סדנאות והכשרות</h3>
+        <p>"הכשרת הורים כמאמנים" וסדנת קלפי האימון — כלים מעשיים להפיכת ההורה למאמן של ילדו.</p>
+        <button class="more" data-book data-subject="סדנה / הכשרת הורים">פרטים והרשמה ←</button>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg></div>
+        <h3>אימון אישי, זוגי ומשפחתי</h3>
+        <p>תהליכי ליווי אישיים בקליניקה במושב יגל או בזום — כולל מתאמנים מחו״ל. בשיטת צמ״ת הייחודית.</p>
+        <button class="more" data-book data-subject="אימון אישי / זוגי / משפחתי">לתיאום פגישה ←</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- lectures -->
+<section class="lectures" id="lectures">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">הרצאות מבוקשות</div>
+      <h2>שבע הרצאות. סיפור אחד אמיתי.</h2>
+      <p>כל הרצאה נשענת על ניסיון חיים אישי ועל ארבעה עשורים בשטח. ניתן להתאים לקהל ולמסגרת. לחצו על הרצאה כדי להזמין אותה.</p>
+    </div>
+    <div class="lec-grid" id="lecGrid">
+      <button class="lec reveal" data-lecture="ניצחתי את כולם, אפילו את עצמי"><span class="n">01</span><div><h3>ניצחתי את כולם, אפילו את עצמי</h3><p>הסיפור האישי — מסע של ילדה שסולקה וחזרה בניצחון.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="SEX D.N.A ומה שביניהם"><span class="n">02</span><div><h3>SEX D.N.A ומה שביניהם</h3><p>גנטיקה, זוגיות וגידול ילדים לא מאובחנים.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="אופטימיות זה שם המשחק"><span class="n">03</span><div><h3>אופטימיות זה שם המשחק</h3><p>פסיכולוגיה חיובית ככלי להתמודדות יומיומית.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="פחד, חרדה וההבדל ביניהם"><span class="n">04</span><div><h3>פחד, חרדה וההבדל ביניהם</h3><p>להבין את הרגש — ולתת לו מקום בלי שיפוטיות.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="לנהל זוגיות ובית בצל ADHD"><span class="n">05</span><div><h3>לנהל זוגיות ובית בצל ADHD</h3><p>ליקויים בתפקודים ניהוליים וחינוך ילדים.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="להיות הבוס כשכולם קצת ADHD"><span class="n">06</span><div><h3>להיות הבוס כשכולם קצת ADHD</h3><p>ניהול סביבת עבודה כשההפרעה בכל מקום.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture="הפרעות קשב בגיל הרך"><span class="n">07</span><div><h3>הפרעות קשב בגיל הרך</h3><p>סימנים ואיתור מוקדם — מלידה ועד גיל שלוש.</p><span class="book">להזמנת ההרצאה ←</span></div></button>
+      <button class="lec reveal" data-lecture='סדנת קלפי "והאר עיננו"' style="background:var(--sage-tint);border-color:var(--sage-l)"><span class="n" style="color:var(--sage)">＋</span><div><h3>סדנת קלפי "והאר עיננו"</h3><p>סדנה להכרת מאפייני כל סוגי ההפרעות.</p><span class="book">להזמנת הסדנה ←</span></div></button>
+    </div>
+  </div>
+</section>
+
+<!-- store -->
+<section class="store" id="store">
+  <div class="wrap" style="display:block">
+    <div class="sec-head center reveal" style="margin-bottom:40px">
+      <div class="eyebrow">מהחנות</div>
+      <h2>ספר וקלפים — להמשיך את המסע בבית</h2>
+    </div>
+    <div class="wrap" style="padding:0">
+      <div class="prod reveal">
+        <img src="assets/book-cover.jpg" alt="הספר תנו להפריע בשקט">
+        <div>
+          <div class="tag">ספר · אוטוביוגרפיה ומדריך להורים</div>
+          <h3>תנו להפריע בשקט</h3>
+          <p>סיפור אישי על ילדות עם הפרעת קשב, ליקויי למידה וחרדה — ודרך חזרה בניצחון. קיים גם באנגלית: "Let Me Be Me".</p>
+          <button class="btn btn-ghost" data-order="הספר &quot;תנו להפריע בשקט&quot;">לרכישה ←</button>
+        </div>
+      </div>
+      <div class="prod reveal">
+        <img src="assets/coaching-cards.jpg" alt="קלפי האימון והאר עיננו" style="width:170px">
+        <div>
+          <div class="tag">ערכת אימון · 26 קלפים</div>
+          <h3>קלפי אימון "והאר עיננו"</h3>
+          <p>קלפים השלכתיים מבוססי DSM-5 להגדרת מאפייני ההפרעות, סביב הערכים: אומץ · דימוי-עצמי · השפעה · דו-קיום.</p>
+          <button class="btn btn-ghost" data-order='ערכת קלפי האימון "והאר עיננו"'>לרכישה ←</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- credo -->
+<section class="credo" id="credo">
+  <div class="wrap reveal">
+    <div class="mark">”</div>
+    <blockquote>אני מאמינה שאחרי כל ילד שמאמין בעצמו — נמצא מבוגר אחד שהאמין בו קודם. האמון וההערכה העצמית מתחילים בבית.</blockquote>
+    <cite>— מתוך "אני מאמינה"</cite>
+    <div class="sign">שלכם באהבה, זהבה</div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-intro reveal">
+      <div class="eyebrow">צור קשר</div>
+      <h2>בואו נדבר — בשמחה</h2>
+      <p>להזמנת הרצאה, סדנה או תהליך אימון אישי. מלאו את הטופס ואחזור אליכם, או פנו ישירות בוואטסאפ או בטלפון.</p>
+      <div class="contact-grid">
+        <a href="tel:0543193619" class="cnt"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg></span><span><span class="k">טלפון / וואטסאפ</span><span class="v">054-3193619</span></span></a>
+        <a href="mailto:z.j.maimon@gmail.com" class="cnt"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="k">אימייל</span><span class="v">z.j.maimon@gmail.com</span></span></a>
+        <div class="cnt"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><span class="k">קליניקה</span><span class="v">מושב יגל</span></span></div>
+        <div class="cnt"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span><span><span class="k">אונליין</span><span class="v">בזום · גם בחו״ל</span></span></div>
+      </div>
+      <div class="map-card">
+        <div class="pin"></div>
+        <div class="lbl">
+          <span class="ico" style="width:38px;height:38px;border-radius:10px;background:var(--sage);color:#fff;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="19" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><b>הקליניקה במושב יגל</b><span>פגישות פנים-אל-פנים בתיאום מראש</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card reveal">
+      <form class="frm" id="contactForm" novalidate>
+        <h3>השאירו פרטים ואחזור אליכם</h3>
+        <p class="fc-sub">הטופס נשלח אליי ישירות לוואטסאפ — מהיר ונוח.</p>
+        <div class="row">
+          <div class="field">
+            <label for="f-name">שם מלא <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="השם שלכם">
+            <div class="msg">נא להזין שם</div>
+          </div>
+          <div class="field">
+            <label for="f-phone">טלפון <span class="req">*</span></label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000">
+            <div class="msg">נא להזין מספר טלפון תקין</div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-subject">מהי הפנייה? <span class="req">*</span></label>
+          <select id="f-subject" name="subject">
+            <option value="">בחרו נושא…</option>
+            <option>הזמנת הרצאה</option>
+            <option>סדנה / הכשרת הורים</option>
+            <option>אימון אישי / זוגי / משפחתי</option>
+            <option>רכישת ספר / קלפים</option>
+            <option>שאלה כללית</option>
+          </select>
+          <div class="msg">נא לבחור נושא</div>
+        </div>
+        <div class="field" id="lectureField" hidden>
+          <label for="f-lecture">הרצאה שמעניינת אתכם (אופציונלי)</label>
+          <select id="f-lecture" name="lecture">
+            <option value="">— לא משנה / נדבר —</option>
+            <option>ניצחתי את כולם, אפילו את עצמי</option>
+            <option>SEX D.N.A ומה שביניהם</option>
+            <option>אופטימיות זה שם המשחק</option>
+            <option>פחד, חרדה וההבדל ביניהם</option>
+            <option>לנהל זוגיות ובית בצל ADHD</option>
+            <option>להיות הבוס כשכולם קצת ADHD</option>
+            <option>הפרעות קשב בגיל הרך</option>
+            <option>סדנת קלפי "והאר עיננו"</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">הודעה (אופציונלי)</label>
+          <textarea id="f-msg" name="message" placeholder="מסגרת, קהל, תאריך מבוקש, או כל דבר שתרצו שאדע…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-inline-end:2px"><path d="M.1 24l1.7-6.2A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.5L.1 24zM6.6 20l.4.2a9.9 9.9 0 0 0 5 1.4 9.9 9.9 0 1 0-8.4-4.7l.3.4-1 3.6 3.7-.9z"/></svg>
+          שליחה בוואטסאפ
+        </button>
+        <p class="alt">מעדיפים מייל? <a href="mailto:z.j.maimon@gmail.com">z.j.maimon@gmail.com</a></p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>תודה! פתחתי לכם וואטסאפ</h3>
+        <p>ההודעה מוכנה עם הפרטים שמילאתם — רק לאשר שליחה. אם החלון לא נפתח, אפשר ללחוץ כאן:</p>
+        <a class="btn btn-primary" id="successWa" href="#" target="_blank" rel="noopener" style="justify-content:center">פתיחת וואטסאפ ידנית</a>
+        <button class="again" id="formAgain">שליחת פנייה נוספת</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="ft-brand">
+      <div class="lg">זהבה מימון</div>
+      <p>מאמנת בכירה להעצמה אישית ולשינוי · מומחית להפרעות ADHD · מרצה, סופרת ומדריכת הורים. "אין חכם כבעל ניסיון".</p>
+    </div>
+    <div>
+      <h4>ניווט</h4>
+      <a href="#about">אודות זהבה</a>
+      <a href="#offer">מה אני מציעה</a>
+      <a href="#lectures">הרצאות מבוקשות</a>
+      <a href="#store">חנות</a>
+      <a href="#credo">אני מאמינה</a>
+    </div>
+    <div>
+      <h4>יצירת קשר</h4>
+      <a href="tel:0543193619">054-3193619</a>
+      <a href="mailto:z.j.maimon@gmail.com">z.j.maimon@gmail.com</a>
+      <a href="https://wa.me/972543193619" target="_blank" rel="noopener">וואטסאפ</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook · Zehava Maimon Assouline</a>
+    </div>
+  </div>
+  <div class="wrap ft-bottom">
+    <span>© <span id="yr"></span> זהבה מימון אסולין · כל הזכויות שמורות</span>
+    <span><a href="accessibility/" style="display:inline">נגישות</a> · <a href="terms-and-service/" style="display:inline">תקנון</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/972543193619" class="fab wa-float" target="_blank" rel="noopener" aria-label="פנייה בוואטסאפ">
+  <svg viewBox="0 0 24 24"><path d="M.1 24l1.7-6.2A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.5L.1 24zM6.6 20l.4.2a9.9 9.9 0 0 0 5 1.4 9.9 9.9 0 1 0-8.4-4.7l.3.4-1 3.6 3.7-.9zM17.5 14.3c-.1-.2-.5-.3-1-.6s-1.5-.7-1.7-.8-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2c-.1-.3 0-.4.1-.6l.4-.5.3-.5v-.4l-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2 5.2 5.2 0 0 0 1.2 2.8 12 12 0 0 0 4.6 4c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1 .1-1.1z"/></svg>
+</a>
+<button class="fab to-top" id="toTop" aria-label="חזרה למעלה">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA_NUMBER='972543193619';
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+
+/* year */
+$('#yr').textContent=new Date().getFullYear();
+
+/* mobile menu */
+const burger=$('#burger'), menu=$('#menu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open);
+});
+$$('a',menu).forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+
+/* nav shadow + active section + back-to-top */
+const nav=$('#siteNav'), toTop=$('#toTop');
+const sections=$$('section[id]');
+const links=new Map($$('.menu a').map(a=>[a.getAttribute('href').slice(1),a]));
+function onScroll(){
+  const y=window.scrollY;
+  nav.classList.toggle('scrolled',y>10);
+  toTop.classList.toggle('show',y>600);
+  let current='';
+  const mid=y+window.innerHeight*0.32;
+  for(const s of sections){ if(s.offsetTop<=mid) current=s.id; }
+  links.forEach((a,id)=>a.classList.toggle('active',id===current));
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* reveal on scroll — with guaranteed fallback so content NEVER stays hidden */
+const revealEls=$$('.reveal');
+function revealAll(){ revealEls.forEach(el=>el.classList.add('in')); }
+let io=null;
+try{
+  io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  revealEls.forEach(el=>io.observe(el));
+}catch(err){ revealAll(); }
+/* failsafe: if IO never fires (some embeds/iframes), show everything anyway */
+setTimeout(()=>{ if(!document.querySelector('.reveal.in')) revealAll(); },1200);
+/* extra belt-and-braces: reveal whatever is already in view on load */
+window.addEventListener('load',()=>{
+  revealEls.forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top<innerHeight*0.95) el.classList.add('in'); });
+});
+
+/* toast */
+let toastT;
+function toast(msg){
+  const t=$('#toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+/* form references */
+const form=$('#contactForm'), success=$('#formSuccess');
+const subjectSel=$('#f-subject'), lectureField=$('#lectureField'), lectureSel=$('#f-lecture');
+
+function syncLectureField(){
+  const show=subjectSel.value==='הזמנת הרצאה';
+  lectureField.hidden=!show;
+}
+subjectSel.addEventListener('change',syncLectureField);
+
+/* prefill helpers — used by "book" buttons across the page */
+function goToForm(){ $('#contact').scrollIntoView({behavior:'smooth'}); }
+function prefill({subject,lecture}={}){
+  if(subject){ subjectSel.value=[...subjectSel.options].some(o=>o.value===subject)?subject:'הזמנת הרצאה'; }
+  syncLectureField();
+  if(lecture){
+    subjectSel.value='הזמנת הרצאה'; syncLectureField();
+    if([...lectureSel.options].some(o=>o.value===lecture)) lectureSel.value=lecture;
+  }
+  goToForm();
+  setTimeout(()=>$('#f-name').focus({preventScroll:true}),600);
+}
+
+/* generic book buttons */
+$$('[data-book]').forEach(b=>b.addEventListener('click',e=>{
+  // allow normal anchor scroll, but also prefill if a subject is set
+  const subj=b.getAttribute('data-subject');
+  if(subj){ e.preventDefault(); prefill({subject:subj}); }
+  else { e.preventDefault(); prefill({subject:'הזמנת הרצאה'}); }
+}));
+
+/* lecture cards */
+$$('.lec').forEach(c=>c.addEventListener('click',()=>{
+  prefill({lecture:c.getAttribute('data-lecture')});
+  toast('בחרתם: '+c.getAttribute('data-lecture'));
+}));
+
+/* store order buttons → open WhatsApp directly */
+$$('[data-order]').forEach(b=>b.addEventListener('click',()=>{
+  const item=b.getAttribute('data-order');
+  const text=`שלום זהבה, אשמח לרכוש: ${item}. תודה!`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`,'_blank','noopener');
+}));
+
+/* validation */
+function setErr(field,on){ field.closest('.field').classList.toggle('err',on); }
+function validPhone(v){ const d=v.replace(/[^\d]/g,''); return d.length>=9 && d.length<=11; }
+
+function buildMessage(d){
+  let m=`שלום זהבה, הגעתי דרך האתר.\n`;
+  m+=`שם: ${d.name}\n`;
+  m+=`טלפון: ${d.phone}\n`;
+  m+=`נושא: ${d.subject}\n`;
+  if(d.lecture) m+=`הרצאה: ${d.lecture}\n`;
+  if(d.message) m+=`הודעה: ${d.message}\n`;
+  return m.trim();
+}
+
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=$('#f-name'), phone=$('#f-phone');
+  let ok=true;
+  if(!name.value.trim()){ setErr(name,true); ok=false; } else setErr(name,false);
+  if(!validPhone(phone.value)){ setErr(phone,true); ok=false; } else setErr(phone,false);
+  if(!subjectSel.value){ setErr(subjectSel,true); ok=false; } else setErr(subjectSel,false);
+  if(!ok){ form.querySelector('.field.err input,.field.err select')?.focus(); return; }
+
+  const data={
+    name:name.value.trim(), phone:phone.value.trim(),
+    subject:subjectSel.value, lecture:(!lectureField.hidden&&lectureSel.value)?lectureSel.value:'',
+    message:$('#f-msg').value.trim()
+  };
+  const url=`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildMessage(data))}`;
+  $('#successWa').href=url;
+  window.open(url,'_blank','noopener');
+  form.style.display='none';
+  success.classList.add('show');
+});
+
+/* send another */
+$('#formAgain').addEventListener('click',()=>{
+  form.reset(); syncLectureField();
+  $$('.field.err',form).forEach(f=>f.classList.remove('err'));
+  success.classList.remove('show'); form.style.display='';
+  $('#f-name').focus();
+});
+
+syncLectureField();
+</script>
+</body>
+</html>
